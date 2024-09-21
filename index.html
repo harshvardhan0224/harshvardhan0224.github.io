@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #ea667a;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+    }
+
+    /* Container for falling emojis */
+    .emoji-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 9999;
+      display: none;
+    }
+
+    /* Emoji falling animation */
+    .emoji {
+      position: absolute;
+      top: -50px;
+      font-size: 30px;
+      opacity: 0.9;
+      animation: fall 2s linear;
+      animation-iteration-count: 2; /* Plays the animation twice, lasting 4 seconds */
+      animation-fill-mode: forwards; /* Stops and keeps the last state */
+    }
+
+    /* Define the falling effect */
+    @keyframes fall {
+      0% {
+        transform: translateY(0px);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh);
+        opacity: 0;
+      }
+    }
+
+
+    /* Random fall duration and delay for variety */
+/* Define more emojis with random positions, durations, and delays for density */
+.emoji:nth-child(1) { animation-duration: 2s; animation-delay: 0s; left: -2%; }
+.emoji:nth-child(2) { animation-duration: 2.5s; animation-delay: 0.2s; left: 0%; }
+.emoji:nth-child(3) { animation-duration: 2s; animation-delay: 0.1s; left: 2%; }
+.emoji:nth-child(4) { animation-duration: 3s; animation-delay: 0.3s; left: 4%; }
+.emoji:nth-child(5) { animation-duration: 1.5s; animation-delay: 0.4s; left: 6%; }
+.emoji:nth-child(6) { animation-duration: 2s; animation-delay: 0.1s; left: 8%; }
+.emoji:nth-child(7) { animation-duration: 1.8s; animation-delay: 0.4s; left: 10%; }
+.emoji:nth-child(8) { animation-duration: 2.5s; animation-delay: 0.3s; left: 12%; }
+.emoji:nth-child(9) { animation-duration: 1.5s; animation-delay: 0.2s; left: 14%; }
+.emoji:nth-child(10) { animation-duration: 1.8s; animation-delay: 0.3s; left: 16%; }
+.emoji:nth-child(11) { animation-duration: 2.5s; animation-delay: 0.2s; left: 18%; }
+.emoji:nth-child(12) { animation-duration: 2s; animation-delay: 0.5s; left: 20%; }
+.emoji:nth-child(13) { animation-duration: 2.5s; animation-delay: 0.2s; left: 22%; }
+.emoji:nth-child(14) { animation-duration: 2s; animation-delay: 0.1s; left: 24%; }
+.emoji:nth-child(15) { animation-duration: 2s; animation-delay: 0.3s; left: 26%; }
+.emoji:nth-child(16) { animation-duration: 1.5s; animation-delay: 0.5s; left: 28%; }
+.emoji:nth-child(17) { animation-duration: 1.8s; animation-delay: 0.4s; left: 30%; }
+.emoji:nth-child(18) { animation-duration: 2.2s; animation-delay: 0.3s; left: 32%; }
+.emoji:nth-child(19) { animation-duration: 2.2s; animation-delay: 0.2s; left: 34%; }
+.emoji:nth-child(20) { animation-duration: 2.5s; animation-delay: 0.4s; left: 36%; }
+.emoji:nth-child(21) { animation-duration: 1.8s; animation-delay: 0.1s; left: 38%; }
+.emoji:nth-child(22) { animation-duration: 2.2s; animation-delay: 0.3s; left: 40%; }
+.emoji:nth-child(23) { animation-duration: 2s; animation-delay: 0.4s; left: 42%; }
+.emoji:nth-child(24) { animation-duration: 1.5s; animation-delay: 0.5s; left: 44%; }
+.emoji:nth-child(25) { animation-duration: 1.8s; animation-delay: 0.2s; left: 46%; }
+.emoji:nth-child(26) { animation-duration: 2.5s; animation-delay: 0.1s; left: 48%; }
+.emoji:nth-child(27) { animation-duration: 2s; animation-delay: 0.4s; left: 50%; }
+.emoji:nth-child(28) { animation-duration: 2s; animation-delay: 0.3s; left: 52%; }
+.emoji:nth-child(29) { animation-duration: 2.2s; animation-delay: 0.2s; left: 54%; }
+.emoji:nth-child(30) { animation-duration: 2.2s; animation-delay: 0.4s; left: 56%; }
+.emoji:nth-child(31) { animation-duration: 1.8s; animation-delay: 0.3s; left: 58%; }
+.emoji:nth-child(32) { animation-duration: 2.5s; animation-delay: 0.5s; left: 60%; }
+.emoji:nth-child(33) { animation-duration: 2s; animation-delay: 0.2s; left: 62%; }
+.emoji:nth-child(34) { animation-duration: 1.8s; animation-delay: 0.3s; left: 64%; }
+.emoji:nth-child(35) { animation-duration: 1.5s; animation-delay: 0.4s; left: 66%; }
+.emoji:nth-child(36) { animation-duration: 2s; animation-delay: 0.2s; left: 68%; }
+.emoji:nth-child(37) { animation-duration: 2.2s; animation-delay: 0.4s; left: 70%; }
+.emoji:nth-child(38) { animation-duration: 2.5s; animation-delay: 0.1s; left: 72%; }
+.emoji:nth-child(39) { animation-duration: 1.8s; animation-delay: 0.5s; left: 74%; }
+.emoji:nth-child(40) { animation-duration: 2s; animation-delay: 0.3s; left: 76%; }
+.emoji:nth-child(41) { animation-duration: 1.5s; animation-delay: 0.2s; left: 78%; }
+.emoji:nth-child(42) { animation-duration: 1.8s; animation-delay: 0.3s; left: 80%; }
+.emoji:nth-child(43) { animation-duration: 2s; animation-delay: 0.4s; left: 82%; }
+.emoji:nth-child(44) { animation-duration: 2.5s; animation-delay: 0.1s; left: 84%; }
+.emoji:nth-child(45) { animation-duration: 2s; animation-delay: 0.2s; left: 86%; }
+.emoji:nth-child(46) { animation-duration: 1.8s; animation-delay: 0.3s; left: 88%; }
+.emoji:nth-child(47) { animation-duration: 2.5s; animation-delay: 0.4s; left: 90%; }
+.emoji:nth-child(48) { animation-duration: 1.5s; animation-delay: 0.5s; left: 92%; }
+.emoji:nth-child(49) { animation-duration: 1.8s; animation-delay: 0.4s; left: 94%; }
+.emoji:nth-child(50) { animation-duration: 2s; animation-delay: 0.3s; left: 96%; }
+.emoji:nth-child(51) { animation-duration: 2.2s; animation-delay: 0.2s; left: 98%; }
+.emoji:nth-child(52) { animation-duration: 2.5s; animation-delay: 0.6s; left: 100%; }
+.emoji:nth-child(53) { animation-duration: 2s; animation-delay: 0.1s; left: 102%; }
+.emoji:nth-child(54) { animation-duration: 2.5s; animation-delay: 0.5s; left: -2%; }
+.emoji:nth-child(55) { animation-duration: 2s; animation-delay: 0.4s; left: 0%; }
+.emoji:nth-child(56) { animation-duration: 1.8s; animation-delay: 0.2s; left: 2%; }
+.emoji:nth-child(57) { animation-duration: 2.2s; animation-delay: 0.5s; left: 4%; }
+.emoji:nth-child(58) { animation-duration: 2s; animation-delay: 0.3s; left: 6%; }
+.emoji:nth-child(59) { animation-duration: 2.5s; animation-delay: 0.4s; left: 8%; }
+.emoji:nth-child(60) { animation-duration: 2s; animation-delay: 0.5s; left: 10%; }
+.emoji:nth-child(61) { animation-duration: 1.8s; animation-delay: 0.2s; left: 12%; }
+.emoji:nth-child(62) { animation-duration: 2.5s; animation-delay: 0.1s; left: 14%; }
+.emoji:nth-child(63) { animation-duration: 1.5s; animation-delay: 0.2s; left: 16%; }
+.emoji:nth-child(64) { animation-duration: 2s; animation-delay: 0.4s; left: 18%; }
+.emoji:nth-child(65) { animation-duration: 1.8s; animation-delay: 0.3s; left: 20%; }
+.emoji:nth-child(66) { animation-duration: 2.2s; animation-delay: 0.2s; left: 22%; }
+.emoji:nth-child(67) { animation-duration: 1.8s; animation-delay: 0.5s; left: 24%; }
+.emoji:nth-child(68) { animation-duration: 2s; animation-delay: 0.1s; left: 26%; }
+.emoji:nth-child(69) { animation-duration: 1.5s; animation-delay: 0.3s; left: 28%; }
+.emoji:nth-child(70) { animation-duration: 2.5s; animation-delay: 0.2s; left: 30%; }
+.emoji:nth-child(71) { animation-duration: 2s; animation-delay: 0.4s; left: 32%; }
+.emoji:nth-child(72) { animation-duration: 1.8s; animation-delay: 0.3s; left: 34%; }
+.emoji:nth-child(73) { animation-duration: 2s; animation-delay: 0.5s; left: 36%; }
+.emoji:nth-child(74) { animation-duration: 2.2s; animation-delay: 0.2s; left: 38%; }
+.emoji:nth-child(75) { animation-duration: 1.8s; animation-delay: 0.4s; left: 40%; }
+.emoji:nth-child(76) { animation-duration: 2s; animation-delay: 0.3s; left: 42%; }
+.emoji:nth-child(77) { animation-duration: 1.8s; animation-delay: 0.2s; left: 44%; }
+.emoji:nth-child(78) { animation-duration: 2.5s; animation-delay: 0.3s; left: 46%; }
+.emoji:nth-child(79) { animation-duration: 1.5s; animation-delay: 0.4s; left: 48%; }
+.emoji:nth-child(80) { animation-duration: 2s; animation-delay: 0.2s; left: 50%; }
+.emoji:nth-child(81) { animation-duration: 2.5s; animation-delay: 0.1s; left: 52%; }
+.emoji:nth-child(82) { animation-duration: 2.2s; animation-delay: 0.2s; left: 54%; }
+.emoji:nth-child(83) { animation-duration: 2.5s; animation-delay: 0.3s; left: 56%; }
+.emoji:nth-child(84) { animation-duration: 2s; animation-delay: 0.4s; left: 58%; }
+.emoji:nth-child(85) { animation-duration: 1.5s; animation-delay: 0.5s; left: 60%; }
+.emoji:nth-child(86) { animation-duration: 2s; animation-delay: 0.2s; left: 62%; }
+.emoji:nth-child(87) { animation-duration: 1.8s; animation-delay: 0.3s; left: 64%; }
+.emoji:nth-child(88) { animation-duration: 2.5s; animation-delay: 0.4s; left: 66%; }
+.emoji:nth-child(89) { animation-duration: 1.8s; animation-delay: 0.5s; left: 68%; }
+.emoji:nth-child(90) { animation-duration: 2s; animation-delay: 0.2s; left: 70%; }
+.emoji:nth-child(91) { animation-duration: 2s; animation-delay: 0.1s; left: 72%; }
+.emoji:nth-child(92) { animation-duration: 2.5s; animation-delay: 0.4s; left: 74%; }
+.emoji:nth-child(93) { animation-duration: 2s; animation-delay: 0.3s; left: 76%; }
+.emoji:nth-child(94) { animation-duration: 1.8s; animation-delay: 0.2s; left: 78%; }
+.emoji:nth-child(95) { animation-duration: 2.5s; animation-delay: 0.5s; left: 80%; }
+.emoji:nth-child(96) { animation-duration: 2s; animation-delay: 0.4s; left: 82%; }
+.emoji:nth-child(97) { animation-duration: 2.5s; animation-delay: 0.1s; left: 84%; }
+.emoji:nth-child(98) { animation-duration: 2s; animation-delay: 0.2s; left: 86%; }
+.emoji:nth-child(99) { animation-duration: 2.5s; animation-delay: 0.3s; left: 88%; }
+.emoji:nth-child(100) { animation-duration: 2s; animation-delay: 0.4s; left: 90%; }
+
+
+
+    /* Message animation */
+    .message {
+      font-size: 1.4em;
+      padding: 22px;
+      background-color: #ea667a;
+      color: white;
+      animation: fadeIn 2s ease-in;
+      font-weight: 800;
+      height: 13vh;
+      z-index: 1;
+      display: none;
+    }
+
+    /* Slideshow styles */
+    .slideshow {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 73vh;
+    overflow: hidden;
+    }
+
+    .slideshow img {
+    width: 100%;
+    max-height: 73vh;
+    object-fit: cover;
+    display: none;
+    position: absolute; /* Ensures the image is positioned inside the container */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* Centers the image */
+    }
+
+    #slide1 {
+      display: block;
+    }
+
+    footer {
+      background: #ea667a;
+      color: #ffffff;
+      padding: 15px;
+      height: 4vh;
+      font-size: 17px;
+      display: none;
+    }
+
+    /* Popup modal */
+    .modal {
+      position: fixed;
+      z-index: 10000;
+      left: 0;
+      top: 0;
+      width: 100vw;
+      height: 100vh;
+      background-color: rgba(0, 0, 0, 0.8);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .modal-content {
+      background-color: #ffffff;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      font-size: 24px;
+      color: #333;
+      height: 100vh;
+      width: 100vw;
+      text-align: center;
+    }
+
+    .modal-button {
+      padding: 10px 20px;
+      background-color: #7a00b8;
+      color: #fff;
+      font-size: 18px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      /* margin: auto; */
+      \: auto;
+      display: inline-block;
+      margin-top: 48vh;
+    }
+
+    .modal-button:hover {
+      background-color: #ff5a6b;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Modal Popup -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <button class="modal-button" onclick="startCelebration()">Continue to site</button>
+    </div>
+  </div>
+
+  <!-- Emoji falling animation -->
+  <div class="emoji-container">
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">💖</span>
+    <span class="emoji">✨</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+    <span class="emoji">🎉</span>
+  </div>
+
+  <!-- Message after emoji animation -->
+  <div class="message">
+    HEADER TEXT 🥺❤️😭
+  </div>
+
+  <!-- Slideshow of special moments -->
+  <div class="slideshow">
+    <img id="slide0" src="slide0.jpg">
+    <img id="slide1" src="slide1.jpg">
+    <img id="slide2" src="slide2.jpg">
+    <img id="slide3" src="slide3.jpg">
+    <img id="slide4" src="slide4.jpg">
+    <img id="slide5" src="slide5.jpg">
+    <img id="slide6" src="slide6.jpg">
+    <img id="slide7" src="slide7.jpg">
+    <img id="slide8" src="slide8.jpg">
+    <img id="slide9" src="slide9.jpg">
+    <img id="slide10" src="slide10.jpg">
+  </div>
+
+  <footer>
+    FOOTER TEXTTTT
+  </footer>
+
+  <audio id="myAudio" src="https://pagalfree.com/musics/128-Tum%20Se%20Hi%20-%20Jab%20We%20Met%20128%20Kbps.mp3"></audio>
+
+  <script>
+    function startCelebration() {
+      // Hide the modal
+      document.getElementById('myModal').style.display = 'none';
+      document.getElementById('myAudio').play();
+
+      // Start the celebration (emoji animation, message, and slideshow)
+      document.querySelector('.emoji-container').style.display = 'block';
+      document.querySelector('.message').style.display = 'block';
+      document.querySelector('.slideshow').style.display = 'block';
+      document.querySelector('footer').style.display = 'block';
+      
+      // Start the slideshow
+      showSlide();
+    }
+
+    let currentSlide = 0;
+    const totalSlides = 10;
+    
+    function showSlide() {
+      // Hide the current slide
+      document.getElementById('slide' + currentSlide).style.display = 'none';
+    
+      // Move to the next slide (or loop back to the first slide)
+      currentSlide = currentSlide === totalSlides ? 1 : currentSlide + 1;
+    
+      // Show the next slide
+      document.getElementById('slide' + currentSlide).style.display = 'block';
+    
+      // Generate a random interval between 2 to 5 seconds (2000ms to 5000ms)
+      const randomInterval = Math.floor(Math.random() * 3000) + 500;
+    
+      // Recursively call showSlide after the random interval
+      setTimeout(showSlide, randomInterval);
+    }
+  </script>
+
+</body>
+</html>
